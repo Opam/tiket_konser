@@ -1,4 +1,4 @@
-body {
+html,body {
     font-family: poppins;
     min-height: 100%;
 }
@@ -17,6 +17,33 @@ body {
     height: 100vh;
     /* full height of the browser */
     width: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th {
+  color: #fff;
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+.table-scroll {
+  border-radius: .5rem;
+}
+
+.table-scroll table thead th {
+  font-size: 1.25rem;
+}
+thead {
+  top: 0;
+  position: sticky;
 }
 
 .p-100{
