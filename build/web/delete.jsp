@@ -4,20 +4,21 @@
     Author     : OPAM
 --%>
 
-<%@page import = "java.sql.*"%>
+<%@page import="java.sql.*"%>
 <%
-    String kdAdmin=request.getParameter("kdAdmin");
+    String kdAdmin = request.getParameter("kdAdmin");
     try {
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/konser-tiket-summerfest","root","");
-        Statement st=conn.createStatement();
-        int i=st.executeUpdate("DELETE FROM admin WHERE kdAdmin="+kdAdmin+"");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/tiket-konser-summerfest", "root", "");
+        String query = "DELETE FROM admin WHERE kdAdmin=?";
+        PreparedStatement pstmt = conn.prepareStatement(query);
+        pstmt.setInt(1, Integer.parseInt(kdAdmin));
+        int rowsDeleted = pstmt.executeUpdate();
         response.sendRedirect("index.jsp");
-        
+
     } catch (Exception e) {
+        e.printStackTrace();
         response.sendRedirect("index.jsp");
-        
     }
-
-
 %>
+

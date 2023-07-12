@@ -36,7 +36,8 @@
         <td> <%out.println(rs.getInt("kdAdmin"));%> </td>
         <td> <%out.println(rs.getString("Nama_Admin"));%> </td>
         <td> <%out.println(rs.getString("No_Telp"));%> </td>
-        <td><a href="edit.jsp?kdAdmin=<%out.println(rs.getInt("kdAdmin"));%>">Edit</a> |  <a href="delete.jsp?kdAdmin= <%out.println (rs.getInt("kdAdmin"));%>">Delete</a></td>
+        <td><a href="edit.jsp?kdAdmin=<%out.println(rs.getInt("kdAdmin"));%>">Edit</a> |  <a href="delete.jsp?kdAdmin=<%out.println(rs.getInt("kdAdmin"));%>">Delete</a></td>
+        
     </tr>
     <% } %>
 </table>
