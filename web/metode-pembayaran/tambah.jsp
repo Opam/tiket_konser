@@ -68,7 +68,7 @@
             <label for="basic-url" class="form-label">Metode Pembayaran</label>
             <input type="text" name="Metode_Pembayaran" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
-                <div class="mb-3">
+        <div class="mb-3">
             <button type="submit" name="submit" value="Simpan"  class="btn btn-success">Simpan</button>
             <a href="index.jsp"><button type="button" class="btn btn-danger">Kembali</button></a>
         </div>
