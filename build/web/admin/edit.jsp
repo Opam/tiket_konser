@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <h1>Edit Data Admin</h1>
+    <h1>Edit Admin - Tiket Summerfest</h1>
 
     <%@page import ="java.sql.*"%>
     <% 

@@ -11,7 +11,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Tambah Data Admin</title>
+    <title>Tambah Admin - Tiket Summerfest</title>
 </head>
 
 <body>
