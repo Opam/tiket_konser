@@ -27,7 +27,7 @@
 
     <body class="body-login">
     <div class="welcome-card">
-        <h1 class="welcome">SAYARA RESTAURANT</h1>
+        <h1 class="welcome">OPM48 SUMMERFEST TOUR</h1>
     </div>
 
     <!--icon icon login-->
@@ -35,10 +35,20 @@
     <div class="kartu-kartu d-flex">
         <a href="admin/index.jsp"
         ><button class="card kartu-login">
-            <i class="bx bx-user"></i>
+            <i class='bx bxs-user bx-flashing'></i>
         </button>
         </a>
-        <a href="transaksi/index.jsp"
+        <a href="metode-pembayaran/index.jsp"
+        ><button class="card kartu-login">
+            <i class='bx bxs-wallet-alt bx-flashing' ></i>
+        </button>
+        </a>
+                <a href="tiket/index.jsp"
+        ><button class="card kartu-login">
+            <i class='bx bxs-id-card bx-flashing'></i>
+        </button>
+                </a>
+                <a href="transaksi/index.jsp"
         ><button class="card kartu-login">
             <i class='bx bx-transfer-alt bx-flashing'></i>
         </button>
