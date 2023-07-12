@@ -1,0 +1,374 @@
+body {
+    font-family: poppins;
+    min-height: 100%;
+}
+
+.body-login {
+    background-image: url("img/login\ bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* align item horizontally */
+    align-items: center;
+    /* align item vertically */
+    flex-direction: column;
+    /* align item vertically */
+    height: 100vh;
+    /* full height of the browser */
+    width: 100%;
+}
+
+.p-100{
+    padding: 100px;
+}
+
+.welcome-card {
+    background: #C5C5FF;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s all;
+    text-decoration: none;
+    display: flex;
+    padding: 10px;
+}
+
+.welcome-card h1 {
+    font-size: 50px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.kartu-login {
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #d9d9d9;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s all;
+    text-decoration: none;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.kartu-login i {
+    font-size: 45px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 0px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.banner {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% !important;
+}
+
+.navbar {
+    background: #C5C5FF;
+
+}
+
+.navbar-fixed-left {
+    width: 140px;
+    position: fixed;
+    border-radius: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar i {
+    font-size: 50px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 80px;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
+.icon-logo svg {
+    width: 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+
+.body-right {
+    background: #070D23;
+
+}
+
+.control {
+    border: none;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 15px;
+    width: 1px;
+    height: 30px;
+}
+
+.control:hover {
+    background: #6750A4;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+.button-control {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 12px;
+}
+
+.button-control button {
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.color-d9 {
+    background-color: #d9d9d9;
+}
+
+.button-control p {
+    font-size: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.button-control h1 {
+    font-size: 25px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.harga-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.checkout {
+    margin-bottom: 30px;
+    background-color: #C5C5FF;
+}
+
+.checkout i {
+    font-size: 28px;
+}
+
+.order {
+    display: flex;
+    background-color: #4D70FF;
+    color: #C5C5FF;
+    width: 100%;
+    transition: 0.2s;
+    margin-top: 130px;
+}
+
+.order h1 {
+    text-align: center !important;
+}
+
+.order:hover {
+    background-color: #C5C5FF;
+    color: #4D70FF;
+    transition: 0.2s;
+}
+
+.order-back {
+    display: flex;
+    background-color: #C5C5FF;
+    color: #4D70FF;
+    justify-content: center;
+    width: 100%;
+    transition: 0.2s;
+    margin-bottom: 50px;
+}
+
+.order-back h1 {
+    text-align: center !important;
+}
+
+.order-back:hover {
+    background-color: #4D70FF;
+    color: #C5C5FF;
+    transition: 0.2s;
+}
+
+.serah {
+    margin: 35px 100px;
+}
+
+.logo {
+    width: 118px;
+    height: 121px;
+    flex-shrink: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.nota-bayar {
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #C5C5FF;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 180px;
+    margin-bottom: 180px;
+}
+
+.karep {
+    padding: 30px;
+    background-color: #606063;
+}
+
+.karep h1 {
+    margin: 0 auto;
+}
+
+.payment {
+    padding: 30px;
+    background-color: #606063;
+}
+
+.heading-nota {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #606063;
+    padding: 50px;
+}
+
+.heading-nota h1 {
+    font-size: 58px;
+    color: #C5C5FF;
+}
+
+.payment {
+    padding: 30px;
+    background-color: #D9D9D9;
+}
+
+.card-payment{
+    margin: 0 auto;
+    width: 769px;
+}
+
+.button-bayar{
+    border-radius: 20px;
+    background: #21005D;
+    color: #FFF;
+    width: 80%;
+}
+
+.kasir{
+    width: 729px;
+    margin: 0 auto;
+}
+
+.kasir .card {
+    border-radius: 20px;
+    border: none;
+    background-color: #4D70FF;
+    color: #1E1E1E;
+    font-weight: 600;
+    font-size: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-basis: 20%;
+    text-align: center;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.kasir .card:hover{
+    background-color: #44FB04;
+    color: #1E1E1E;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.body-service{
+    background-color: #21005D;
+}
+
+.legend-card{
+    margin-left: 100px !important;
+}
+
+.available{
+    background-color: #4D70FF !important;
+}
+.disableds{
+    background-color: #36383D !important;
+}
+
+.legend p{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.header-manager{
+    margin-left: -12px;
+    width: 1920px;
+}
+
+.fixed-top{
+        margin-right: -24px;
+}
+
+.button-ketersediaan{
+    width: 40%;
+}
+
+.body-manager {
+    margin-top: 190px;
+}
+
+.navbar-manager-padding{
+    padding-top: 300px;
+}
+
+.togel{
+    width: 20%;
+    height: 10%;
+    
+}
