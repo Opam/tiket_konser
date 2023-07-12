@@ -45,7 +45,7 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand text-danger fw-bold" href="#">JKT48 Summerfest</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,7 +71,7 @@
             <div class="bg-image h-100" style="background-color: #f5f7fa;">
               <div class="mask d-flex align-items-center h-100">
                 <div class="container mt-5">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-scenter">
                         <div class="col-12">
                             <h1 class="text-center">DATA ADMIN</h1>
                         </div>

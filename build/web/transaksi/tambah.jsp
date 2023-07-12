@@ -12,19 +12,65 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Tambah Transaksi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tambah Transaksi - Tiket Summerfest</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../bootstrap-5.3.0-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+    />
 </head>
 <body>
-    <h1>Tambah Transaksi</h1>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container">
+            <a class="navbar-brand text-danger fw-bold" href="#">JKT48 Summerfest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tiket</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Metode Pembayaran</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="../transaksi/index.jsp">Transaksi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    <div class="container">
+                        <div class="row justify-content-center">
+                        <div class="col-12">
+                            <h1 class="text-center mt-3">TAMBAH TRANSAKSI</h1>
+                        </div> 
+                    </div>
     <form action="" method="POST">
-        <label>Kode Transaksi</label><br>
-        <input type="text" name="kdTransaksi" /><br />
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Kode Transaksi</label>
+            <input type="text" name="kdTransaksi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
 
-        <label>Nama Peserta</label><br>
-        <input type="text" name="Nama_Peserta" /><br />
-
-        <label>Admin</label><br>
-        <select name="admin">
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Nama Peserta</label>
+            <input type="text" name="Nama_Peserta" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        
+        <label for="basic-url" class="form-label">Nama Admin</label>
+        <select name="admin" class="form-select form-select-lg">
             <% 
             Connection connection = null;
             Statement statement = null;
@@ -56,22 +102,33 @@
             }
             %>
         </select><br />
-
-        <label>Kode Tiket</label><br>
-        <input type="text" name="kdTiket" /><br />
-
-        <label>Kode Pembayaran</label><br>
-        <input type="text" name="kdPembayaran" /><br />
-
-        <label>Uang Bayar</label><br>
-        <input type="text" name="Uang_Bayar" /><br />
-
-        <label>Kembalian</label><br>
-        <input type="text" name="Kembalian" /><br /><br />
-
-        <input type="submit" name="submit" value="Simpan" /><br />
-        <a href="index.jsp">Kembali</a>
+ 
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Kode Tiket</label>
+            <input type="text" name="kdTiket" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Kode Pembayaran</label>
+            <input type="text" name="kdPembayaran" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Uang Bayar</label>
+            <input type="text" name="Uang_Bayar" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">Kembalian</label>
+            <input type="text" name="Kembalian" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        
+        <div class="mb-3">
+            <button type="submit" name="submit" value="Simpan"  class="btn btn-success">Simpan</button>
+            <a href="index.jsp"><button type="button" class="btn btn-danger">Kembali</button></a>
+        </div>
     </form>
+    </div>
 </body>
 </html>
 
