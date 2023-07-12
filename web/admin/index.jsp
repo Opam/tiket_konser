@@ -43,26 +43,50 @@
     </head>
 
     <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tiket</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Metode Pembayaran</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../transaksi/index.jsp">Transaksi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
         <section class="intro">
             <div class="bg-image h-100" style="background-color: #f5f7fa;">
               <div class="mask d-flex align-items-center h-100">
-                <div class="container">
+                <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-12">
                             <h1 class="text-center">DATA ADMIN</h1>
                         </div>
                     </div>
-                    <div class="row"> 
-                        <div class="col-4">
-                        </div>
-                        <div class="col-4">
+                    <div class="row mt-3"> 
+                        <div class="col-4 mx-0">
                             <a href="tambah.jsp"><button type="button" class="btn btn-success">Tambah Data Admin</button></a>
                         </div>
-                        <div class="col-4">
-                            <a href="ekspor.jsp"><button type="button" class="btn btn-info">Download Data Admin</button></a>
+                        <div class="col-4 mx-0">
+                        </div>
+                        <div class="col-4 mx-0">
+                            <a href="ekspor.jsp"><button type="button" class="btn btn-info text-white">Download Data Admin</button></a>
                         </div>
                     </div>
-                  <div class="row justify-content-center">
+                  <div class="row justify-content-center mt-2">
                     <div class="col-12">
                       <div class="card">
                         <div class="card-body p-0">
