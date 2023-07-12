@@ -38,6 +38,11 @@
             <i class="bx bx-user"></i>
         </button>
         </a>
+        <a href="transaksi/index.jsp"
+        ><button class="card kartu-login">
+            <i class='bx bx-transfer-alt bx-flashing'></i>
+        </button>
+        </a>
     </div>
 
     <script src="bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
