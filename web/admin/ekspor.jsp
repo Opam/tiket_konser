@@ -63,7 +63,6 @@
                                   <th scope="col">kd Admin</th>
                                   <th scope="col">Nama Admin</th>
                                   <th scope="col">No Telp</th>
-                                  <th scope="col">Aksi</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -72,7 +71,6 @@
                                     <td> <%out.println(rs.getInt("kdAdmin"));%> </td>
                                     <td> <%out.println(rs.getString("Nama_Admin"));%> </td>
                                     <td> <%out.println(rs.getString("No_Telp"));%> </td>
-                                    <td><a href="edit.jsp?kdAdmin=<%out.println(rs.getInt("kdAdmin"));%>"><button type="button" class="btn btn-warning">Edit</button></a> |  <a href="delete.jsp?kdAdmin=<%out.println(rs.getInt("kdAdmin"));%>"><button type="button" class="btn btn-danger">Delete</button></a></td>
                                 </tr>
                                 <% } %>
                               </tbody>
