@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2023 at 02:50 AM
+-- Generation Time: Jul 13, 2023 at 03:19 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -91,8 +91,8 @@ CREATE TABLE `transaksi` (
   `kdTransaksi` varchar(10) NOT NULL,
   `Nama_Peserta` varchar(50) NOT NULL,
   `admin` int(3) NOT NULL,
-  `tiket` int(4) NOT NULL,
-  `mtd_bayar` int(3) NOT NULL,
+  `tiket` varchar(50) NOT NULL,
+  `mtd_bayar` varchar(50) NOT NULL,
   `Uang_Bayar` int(10) NOT NULL,
   `Kembalian` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -102,9 +102,10 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`kdTransaksi`, `Nama_Peserta`, `admin`, `tiket`, `mtd_bayar`, `Uang_Bayar`, `Kembalian`) VALUES
-('234324', 'Razina', 45645, 45645, 54645, 456, 456),
-('34534534', 'Taki', 2, 3242, 23423, 1000000, 50000),
-('4535', 'Razin', 2, 145645, 1546456, 1456456, 1546456);
+('234234523', 'Razin', 2, 'Jogja Tour VIP - 50K', 'Link Aja', 1456456, 324234),
+('324523534', 'Cypher', 20500043, 'Semarang Tour VIP - 50K', 'DANA', 100000, 50000),
+('34534534', 'Taki', 2, '3242', '23423', 1000000, 50000),
+('4535', 'Razin', 2, '145645', '1546456', 1456456, 1546456);
 
 --
 -- Indexes for dumped tables
