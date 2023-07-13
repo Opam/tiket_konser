@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2023 at 01:06 AM
+-- Generation Time: Jul 13, 2023 at 02:50 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -72,6 +72,15 @@ CREATE TABLE `tiket` (
   `Harga` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tiket`
+--
+
+INSERT INTO `tiket` (`kdTiket`, `Nama_Tiket`, `Harga`) VALUES
+(123, 'Jogja Tour VIP - 50K', 50000),
+(124, 'Solo Tour VIP - 50K', 50000),
+(125, 'Semarang Tour VIP - 50K', 50000);
+
 -- --------------------------------------------------------
 
 --
@@ -82,8 +91,8 @@ CREATE TABLE `transaksi` (
   `kdTransaksi` varchar(10) NOT NULL,
   `Nama_Peserta` varchar(50) NOT NULL,
   `admin` int(3) NOT NULL,
-  `kdTiket` int(4) NOT NULL,
-  `kdPembayaran` int(3) NOT NULL,
+  `tiket` int(4) NOT NULL,
+  `mtd_bayar` int(3) NOT NULL,
   `Uang_Bayar` int(10) NOT NULL,
   `Kembalian` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -92,7 +101,7 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`kdTransaksi`, `Nama_Peserta`, `admin`, `kdTiket`, `kdPembayaran`, `Uang_Bayar`, `Kembalian`) VALUES
+INSERT INTO `transaksi` (`kdTransaksi`, `Nama_Peserta`, `admin`, `tiket`, `mtd_bayar`, `Uang_Bayar`, `Kembalian`) VALUES
 ('234324', 'Razina', 45645, 45645, 54645, 456, 456),
 ('34534534', 'Taki', 2, 3242, 23423, 1000000, 50000),
 ('4535', 'Razin', 2, 145645, 1546456, 1456456, 1546456);
@@ -124,7 +133,9 @@ ALTER TABLE `tiket`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`kdTransaksi`),
-  ADD KEY `admin` (`admin`);
+  ADD KEY `admin` (`admin`),
+  ADD KEY `mtd_bayar` (`mtd_bayar`),
+  ADD KEY `tiket` (`tiket`);
 
 --
 -- Constraints for dumped tables
