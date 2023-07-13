@@ -111,8 +111,8 @@
                                     <td> <%out.println(rs.getInt("kdTransaksi"));%> </td>
                                     <td> <%out.println(rs.getString("Nama_Peserta"));%> </td>
                                     <td> <%out.println(rs.getString("admin"));%> </td>
-                                    <td> <%out.println(rs.getInt("kdTiket"));%> </td>
-                                    <td> <%out.println(rs.getString("kdPembayaran"));%> </td>
+                                    <td> <%out.println(rs.getString("tiket"));%> </td>
+                                    <td> <%out.println(rs.getString("mtd_bayar"));%> </td>
                                     <td> <%out.println(rs.getString("Uang_Bayar"));%> </td>
                                     <td> <%out.println(rs.getString("Kembalian"));%> </td>
                                     <td><a href="edit.jsp?kdTransaksi=<%out.println(rs.getInt("kdTransaksi"));%>"><button type="button" class="btn btn-warning">Edit</button></a> |  <a href="delete.jsp?kdTransaksi=<%out.println(rs.getInt("kdTransaksi"));%>"><button type="button" class="btn btn-danger">Delete</button></a></td>

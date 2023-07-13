@@ -102,50 +102,20 @@
             }
             %>
         </select><br />
- 
-        <label for="basic-url" class="form-label">Nama Admin</label>
-        <select name="admin" class="form-select form-select-lg">
-            <% 
-            Connection connection = null;
-            Statement statement = null;
-            ResultSet rs = null;
-            try {
-                String connectionURL = "jdbc:mysql://localhost/tiket-konser-summerfest";
-                String username = "root";
-                String password = "";
-                Class.forName("com.mysql.jdbc.Driver");
-                connection = DriverManager.getConnection(connectionURL, username, password);
 
-                statement = connection.createStatement();
-                String query = "SELECT * FROM admin";
-                rs = statement.executeQuery(query);
-
-                while (rs.next()) {
-                    String kdAdmin = rs.getString("kdAdmin");
-                    String Nama_Admin = rs.getString("Nama_Admin");
-                    %>
-                    <option value="<%=kdAdmin%>"><%=Nama_Admin%></option>
-                    <%
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                if (rs != null) rs.close();
-                if (statement != null) statement.close();
-                if (connection != null) connection.close();
-            }
-            %>
-        </select><br />
+        <label for="basic-url" class="form-label">Nama Tiket</label>
+        <select id="tiket" name="tiket" class="form-select form-select-lg">
+            <option>Jogja Tour VIP - 50K</option>
+            <option>Solo Tour VIP - 50K</option>
+            <option>Semarang Tour VIP - 50K</option>
+        </select><br/>
         
-        <div class="mb-3">
-            <label for="basic-url" class="form-label">Kode Tiket</label>
-            <input type="text" name="kdTiket" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
-        
-        <div class="mb-3">
-            <label for="basic-url" class="form-label">Kode Pembayaran</label>
-            <input type="text" name="kdPembayaran" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
+        <label for="basic-url" class="form-label">Metode Pembayaran</label>
+        <select id="mtd_bayar" name="mtd_bayar" class="form-select form-select-lg">
+            <option>Link Aja</option>
+            <option>ShopeePay</option>
+            <option>DANA</option>
+        </select><br/>
         
         <div class="mb-3">
             <label for="basic-url" class="form-label">Uang Bayar</label>
@@ -170,8 +140,8 @@
     String kdTransaksi = request.getParameter("kdTransaksi");
     String Nama_Peserta = request.getParameter("Nama_Peserta");
     String admin = request.getParameter("admin");
-    String kdTiket = request.getParameter("kdTiket");
-    String kdPembayaran = request.getParameter("kdPembayaran");
+    String tiket = request.getParameter("tiket");
+    String mtd_bayar = request.getParameter("mtd_bayar");
     String Uang_Bayar = request.getParameter("Uang_Bayar");
     String Kembalian = request.getParameter("Kembalian");
     String URL = "jdbc:mysql://localhost/tiket-konser-summerfest";
@@ -180,17 +150,17 @@
     PreparedStatement ps = null;
     int updateQuery = 0;
 
-    if (kdTransaksi != null && Nama_Peserta != null && admin != null && kdTiket != null && kdPembayaran != null && Uang_Bayar != null && Kembalian != null) {
+    if (kdTransaksi != null && Nama_Peserta != null && admin != null && tiket != null && mtd_bayar != null && Uang_Bayar != null && Kembalian != null) {
         try {
             conn = DriverManager.getConnection(URL, "root", "");
 
-            String query = "INSERT INTO transaksi (kdTransaksi, Nama_Peserta, admin, kdTiket, kdPembayaran, Uang_Bayar, Kembalian) VALUES (?,?,?,?,?,?,?)";
+            String query = "INSERT INTO transaksi (kdTransaksi, Nama_Peserta, admin, tiket, mtd_bayar, Uang_Bayar, Kembalian) VALUES (?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(query);
             ps.setString(1, kdTransaksi);
             ps.setString(2, Nama_Peserta);
             ps.setString(3, admin);
-            ps.setString(4, kdTiket);
-            ps.setString(5, kdPembayaran);
+            ps.setString(4, tiket);
+            ps.setString(5, mtd_bayar);
             ps.setString(6, Uang_Bayar);
             ps.setString(7, Kembalian);
 
