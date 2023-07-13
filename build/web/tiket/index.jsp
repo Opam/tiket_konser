@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ekspor
-    Created on : Jul 12, 2023, 4:33:28 PM
+    Document   : index
+    Created on : Jul 12, 2023, 4:22:09 PM
     Author     : OPAM
 --%>
 
@@ -18,7 +18,7 @@
         connection=DriverManager.getConnection(connectionURL, username, password);
         
         statement=connection.createStatement();
-        String query="SELECT * FROM `mtd_bayar`";
+        String query="SELECT * FROM `tiket`";
         rs=statement.executeQuery(query);
     %>
     
@@ -27,7 +27,7 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Metode Pembayaran - Tiket Summerfest</title>
+    <title>Tiket - Tiket Summerfest</title>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -43,13 +43,47 @@
     </head>
 
     <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container">
+            <a class="navbar-brand text-danger fw-bold" href="#">JKT48 Summerfest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Admin</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Tiket</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Metode Pembayaran</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../transaksi/index.jsp">Transaksi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
         <section class="intro">
             <div class="bg-image h-100" style="background-color: #f5f7fa;">
               <div class="mask d-flex align-items-center h-100">
                 <div class="container mt-5">
                     <div class="row justify-content-scenter">
                         <div class="col-12">
-                            <h1 class="text-center">DATA METODE PEMBAYARAN</h1>
+                            <h1 class="text-center">DATA TIKET</h1>
+                        </div>
+                    </div>
+                    <div class="row mt-3"> 
+                        <div class="col-4 mx-0">
+                            <a href="tambah.jsp"><button type="button" class="btn btn-success">Tambah Data Tiket</button></a>
+                        </div>
+                        <div class="col-4 mx-0">
+                        </div>
+                        <div class="col-4 mx-0">
+                            <a href="ekspor.jsp" target="_blank"><button type="button" class="btn btn-info text-white">Download Data Tiket</button></a>
                         </div>
                     </div>
                   <div class="row justify-content-center mt-2">
@@ -60,17 +94,20 @@
                             <table class="table table-striped mb-0">
                               <thead style="background-color: #002d72;">
                                 <tr style="color: #FFF">
-                                  <th scope="col">kd Pembayaran</th>
-                                  <th scope="col">Metode Pembayaran</th>
+                                  <th scope="col">kdTiket</th>
+                                  <th scope="col">Nama_Tiket</th>
+                                  <th scope="col">Harga</th>
+
                                   <th scope="col">Aksi</th>
                                 </tr>
                               </thead>
                               <tbody>
                                   <% while (rs.next()){ %>
                                 <tr>
-                                    <td> <%out.println(rs.getInt("kdPembayaran"));%> </td>
-                                    <td> <%out.println(rs.getString("Metode_Pembayaran"));%> </td>
-                                    <td><a href="edit.jsp?kdPembayaran=<%out.println(rs.getInt("kdPembayaran"));%>"><button type="button" class="btn btn-warning">Edit</button></a> |  <a href="delete.jsp?kdPembayaran=<%out.println(rs.getInt("kdPembayaran"));%>"><button type="button" class="btn btn-danger">Delete</button></a></td>
+                                    <td> <%out.println(rs.getInt("kdTiket"));%> </td>
+                                    <td> <%out.println(rs.getString("Nama_Tiket"));%> </td>
+                                    <td> <%out.println(rs.getString("Harga"));%> </td>
+                                    <td><a href="edit.jsp?kdTiket=<%out.println(rs.getInt("kdTiket"));%>"><button type="button" class="btn btn-warning">Edit</button></a> |  <a href="delete.jsp?kdTiket=<%out.println(rs.getInt("kdTiket"));%>"><button type="button" class="btn btn-danger">Delete</button></a></td>
                                 </tr>
                                 <% } %>
                               </tbody>

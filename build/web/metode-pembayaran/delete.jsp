@@ -6,13 +6,13 @@
 
 <%@page import="java.sql.*"%>
 <%
-    String kdAdmin = request.getParameter("kdAdmin");
+    String kdPembayaran = request.getParameter("kdPembayaran");
     try {
         Class.forName("com.mysql.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/tiket-konser-summerfest", "root", "");
-        String query = "DELETE FROM admin WHERE kdAdmin=?";
+        String query = "DELETE FROM mtd_bayar WHERE kdPembayaran=?";
         PreparedStatement pstmt = conn.prepareStatement(query);
-        pstmt.setInt(1, Integer.parseInt(kdAdmin));
+        pstmt.setInt(1, Integer.parseInt(kdPembayaran));
         int rowsDeleted = pstmt.executeUpdate();
         response.sendRedirect("index.jsp");
 

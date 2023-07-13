@@ -18,7 +18,7 @@
         connection=DriverManager.getConnection(connectionURL, username, password);
         
         statement=connection.createStatement();
-        String query="SELECT * FROM `admin`";
+        String query="SELECT * FROM `mtd_bayar`";
         rs=statement.executeQuery(query);
     %>
     
@@ -27,7 +27,7 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Data Admin - Tiket Summerfest</title>
+    <title>Metode Pembayaran - Tiket Summerfest</title>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -47,9 +47,9 @@
             <div class="bg-image h-100" style="background-color: #f5f7fa;">
               <div class="mask d-flex align-items-center h-100">
                 <div class="container mt-5">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-scenter">
                         <div class="col-12">
-                            <h1 class="text-center">DATA ADMIN</h1>
+                            <h1 class="text-center">DATA METODE PEMBAYARAN</h1>
                         </div>
                     </div>
                   <div class="row justify-content-center mt-2">
@@ -60,17 +60,17 @@
                             <table class="table table-striped mb-0">
                               <thead style="background-color: #002d72;">
                                 <tr style="color: #FFF">
-                                  <th scope="col">kd Admin</th>
-                                  <th scope="col">Nama Admin</th>
-                                  <th scope="col">No Telp</th>
+                                  <th scope="col">kd Pembayaran</th>
+                                  <th scope="col">Metode Pembayaran</th>
+                                  <th scope="col">Aksi</th>
                                 </tr>
                               </thead>
                               <tbody>
                                   <% while (rs.next()){ %>
                                 <tr>
-                                    <td> <%out.println(rs.getInt("kdAdmin"));%> </td>
-                                    <td> <%out.println(rs.getString("Nama_Admin"));%> </td>
-                                    <td> <%out.println(rs.getString("No_Telp"));%> </td>
+                                    <td> <%out.println(rs.getInt("kdPembayaran"));%> </td>
+                                    <td> <%out.println(rs.getString("Metode_Pembayaran"));%> </td>
+                                    <td><a href="edit.jsp?kdPembayaran=<%out.println(rs.getInt("kdPembayaran"));%>"><button type="button" class="btn btn-warning">Edit</button></a> |  <a href="delete.jsp?kdPembayaran=<%out.println(rs.getInt("kdPembayaran"));%>"><button type="button" class="btn btn-danger">Delete</button></a></td>
                                 </tr>
                                 <% } %>
                               </tbody>

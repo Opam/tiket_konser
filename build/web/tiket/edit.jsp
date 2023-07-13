@@ -14,12 +14,12 @@
 </head>
 
 <body>
-    <h1>Edit Admin - Tiket Summerfest</h1>
+    <h1>Edit Tiket - Tiket Summerfest</h1>
 
     <%@page import ="java.sql.*"%>
     <% 
            
-           String kdPembayaran = request.getParameter("kdPembayaran");
+           String kdTiket = request.getParameter("kdTiket");
            Connection connection=null;
            Statement statement=null;
            ResultSet rs=null;
@@ -31,14 +31,16 @@
                connection = DriverManager.getConnection(connectionURL, username, password);
                
                statement = connection.createStatement();
-               String query="SELECT * FROM mtd_bayar WHERE kdPembayaran="+kdPembayaran+"";
+               String query="SELECT * FROM tiket WHERE kdTiket="+kdTiket+"";
                rs = statement.executeQuery(query);
                while (rs.next()) {
         %>
 
-    <form method="post" action="proses_edit.jsp?kdPembayaran=<%= kdPembayaran %>">
-        kdPembayaran <br> <input type="text" name="kdPembayaran" value="<%out.println(rs.getInt("kdPembayaran"));%>"><br>
-        Metode_Pembayaran <br><input type="text" name="Metode_Pembayaran" value="<%out.println(rs.getString("Metode_Pembayaran"));%>"><br>
+    <form method="post" action="proses_edit.jsp?kdTiket=<%= kdTiket %>">
+        kdTiket <br> <input type="text" name="kdTiket" value="<%out.println(rs.getInt("kdTiket"));%>"><br>
+        Nama_Tiket <br><input type="text" name="Nama_Tiket" value="<%out.println(rs.getString("Nama_Tiket"));%>"><br>
+        Harga <br><input type="text" name="Harga" value="<%out.println(rs.getString("Harga"));%>"><br>
+
         <input type="submit" value="Update">
     </form>
     <%

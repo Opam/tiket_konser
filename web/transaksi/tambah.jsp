@@ -103,6 +103,40 @@
             %>
         </select><br />
  
+        <label for="basic-url" class="form-label">Nama Admin</label>
+        <select name="admin" class="form-select form-select-lg">
+            <% 
+            Connection connection = null;
+            Statement statement = null;
+            ResultSet rs = null;
+            try {
+                String connectionURL = "jdbc:mysql://localhost/tiket-konser-summerfest";
+                String username = "root";
+                String password = "";
+                Class.forName("com.mysql.jdbc.Driver");
+                connection = DriverManager.getConnection(connectionURL, username, password);
+
+                statement = connection.createStatement();
+                String query = "SELECT * FROM admin";
+                rs = statement.executeQuery(query);
+
+                while (rs.next()) {
+                    String kdAdmin = rs.getString("kdAdmin");
+                    String Nama_Admin = rs.getString("Nama_Admin");
+                    %>
+                    <option value="<%=kdAdmin%>"><%=Nama_Admin%></option>
+                    <%
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (rs != null) rs.close();
+                if (statement != null) statement.close();
+                if (connection != null) connection.close();
+            }
+            %>
+        </select><br />
+        
         <div class="mb-3">
             <label for="basic-url" class="form-label">Kode Tiket</label>
             <input type="text" name="kdTiket" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
