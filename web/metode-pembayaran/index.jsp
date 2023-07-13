@@ -58,7 +58,7 @@
                   <a class="nav-link" href="../tiket/index.jsp">Tiket</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../index.jsp">Metode Pembayaran</a>
+                  <a class="nav-link" href="#">Metode Pembayaran</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="../transaksi/index.jsp">Transaksi</a>
